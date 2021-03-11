@@ -1,5 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
+import Navigation from './nav'
+
 
 const Header = () => {
     return (
@@ -22,9 +24,13 @@ const Header = () => {
 
                 `}
             >
-                <h1>Hotel Gatsby</h1>
-
-                <p>Nav</p>
+                <h1
+                    css={css`
+                        color: #fff;
+                        text-align: center;
+                    `}
+                >Hotel Gatsby</h1>
+                <Navigation/>
             </div>
         </header>
     )

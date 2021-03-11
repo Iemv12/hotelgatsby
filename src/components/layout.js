@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 
 import { Global, css } from '@emotion/react'
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
     return (
         <>
             <Global
@@ -45,4 +45,4 @@ const layout = ({ children }) => {
     )
 }
 
-export default layout
+export default Layout
