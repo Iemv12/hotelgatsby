@@ -10,11 +10,11 @@ const Layout = ({ children }) => {
             <Global
                 styles={css`
                     html {
-                        font-size: 62.5%
+                        font-size: 62.5%;
                     }
                     body {
-                        font-size: 16px;
-                        font-size: 1.6rem;
+                        font-size: 18px;
+                        font-size: 1.8rem;
                         line-height: 1.5;
                     }
                     h1, h2, h3{
