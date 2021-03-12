@@ -42,6 +42,12 @@ module.exports = {
         labelFormat: `[local]`,
         cssPropOptimization: true,
       },
-    }
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `6632a27a08c1a8f8bba5f1589da7a8`
+      },
+    },
   ],
 }

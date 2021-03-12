@@ -1,7 +1,25 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+exports.createPages = async ({actions, graphql, reporter}) => {
+    const results = await graphql(`
+    query{
+        allDatoCmsRoom{
+            nodes{
+                slug
+        }
+        }
+    }`)
 
-// You can delete this file if you're not using it
+    // console.log(results.data.allDatoCmsRoom.nodes)
+    if(results.errors){
+        reporter.panic("No Found, errors!!!", results.errors)
+    }
+
+    const rooms = results.data.allDatoCmsRoom.nodes
+
+    rooms.forEach( room => {
+        actions.createPage({
+            path: room.slug,
+            component: require.resolve('')
+        })
+    })
+
+}
